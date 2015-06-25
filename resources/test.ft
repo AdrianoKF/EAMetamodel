@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ft="http://www.ds-lab.org/mdsd4sil/metamodel/ft">
+  <ft:AndGate name="G_AND" description="Gate" resultsIn="/5"/>
+  <ft:OrGate name="G_OR" description="Top-level gate" resultsIn="/6"/>
+  <ft:BasicEvent name="COMPFAIL1" description="Component 1 Failure"/>
+  <ft:BasicEvent name="COMPFAIL2" description="Component 2 Failure"/>
+  <ft:BasicEvent name="MONFAIL" description="Monitor Failure"/>
+  <ft:IntermediateEvent name="COMPFAIL_BOTH" description="Both components failure"/>
+  <ft:IntermediateEvent name="COMP_MON_FAIL" description="Both components or monitor failure"/>
+</xmi:XMI>

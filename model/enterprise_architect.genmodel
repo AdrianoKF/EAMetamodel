@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/EAMetamodel/src" modelPluginID="EAMetamodel" modelName="enterprise_architect"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>enterprise_architect.ecore</foreignModel>
+  <genPackages prefix="EnterpriseArchitect" basePackage="org.mdsd4sil.metamodel" disposableProviderFactory="true"
+      dataTypeConverters="true" contentTypeIdentifier="" fileExtensions="eamod" ecorePackage="enterprise_architect.ecore#/">
+    <genClasses ecoreClass="enterprise_architect.ecore#//ModelObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/taggedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/objectId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/objectType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/stereotype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ModelObject/isAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/package"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/incomingConnectors"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ModelObject/outgoingConnectors"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//Diagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Diagram/objects"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Diagram/diagramId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Diagram/diagramType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Diagram/notes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Diagram/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Diagram/connectors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Diagram/package"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Operation/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/operationId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/behavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/isStatic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Operation/isAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Operation/object"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//OperationParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/isConst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//OperationParameter/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//OperationParameter/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Package/objects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Package/diagrams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Package/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Package/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Package/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Package/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Package/packageId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Package/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Attribute/taggedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Attribute/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Attribute/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Attribute/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Attribute/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Attribute/object"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//AttributeTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//AttributeTag/propertyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//AttributeTag/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//AttributeTag/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//AttributeTag/notes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//AttributeTag/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//Connector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/connectorId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/stereotype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/sourceRole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/destRole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/sourceAccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/destAcccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/sourceAggregationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//Connector/destAggregationType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Connector/sourceObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//Connector/destObject"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//DiagramObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//DiagramObject/instanceId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//DiagramObject/object"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//DiagramObject/diagram"/>
+    </genClasses>
+    <genClasses ecoreClass="enterprise_architect.ecore#//ObjectProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ObjectProperty/propertyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ObjectProperty/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ObjectProperty/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute enterprise_architect.ecore#//ObjectProperty/notes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference enterprise_architect.ecore#//ObjectProperty/object"/>
+    </genClasses>
+    <nestedGenPackages prefix="Datatypes" disposableProviderFactory="true" ecorePackage="enterprise_architect.ecore#//datatypes">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="enterprise_architect.ecore#//datatypes/Scope">
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/Scope/Private"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/Scope/Public"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/Scope/Protected"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/Scope/Package"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="enterprise_architect.ecore#//datatypes/AggregationType">
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/AggregationType/None"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/AggregationType/Aggregation"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/AggregationType/Composition"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="enterprise_architect.ecore#//datatypes/ConnectorType">
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Abstraction"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Aggregation"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Assembly"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Association"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Collaboration"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/CommunicationPath"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Connector"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/ControlFlow"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Delegate"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Dependency"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Deployment"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/ERLink"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Extension"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Generalization"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/InformationFlow"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Instantiation"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/InterruptFlow"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Manifest"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Nesting"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/NoteLink"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/ObjectFlow"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Package"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/ProtocolConformance"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/ProtocolTransition"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Realisation"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Sequence"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/StateFlow"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Substitution"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/Usage"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ConnectorType/UseCase"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="enterprise_architect.ecore#//datatypes/ObjectType">
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Action"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ActionPin"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Activity"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ActivityParameter"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ActivityPartition"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ActivityRegion"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Actor"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Artifact"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Association"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Boundary"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/CentralBufferNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Change"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Class"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Collaboration"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/CollaborationOccurrence"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Comment"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Component"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ConditionalNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Constraint"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/DataStore"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/DataType"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Decision"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/DeploymentSpecification"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Device"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/DiagramFrame"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Entity"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/EntryPoint"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Enumeration"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Event"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ExceptionHandler"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ExecutionEnvironment"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ExitPoint"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ExpansionNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ExpansionRegion"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Feature"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/GUIElement"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/InformationItem"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Interaction"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/InteractionFragment"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/InteractionOccurrence"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/InteractionState"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Interface"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/InterruptibleActivityRegion"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Issue"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Label"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/LoopNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/MergeNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/MessageEndpoint"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Node"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Note"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Object"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ObjectNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Package"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Parameter"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Part"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Port"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/PrimitiveType"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ProtocolStateMachine"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/ProvidedInterface"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Region"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Report"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/RequiredInterface"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Requirement"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Risk"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Screen"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Sequence"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Signal"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/State"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/StateMachine"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/StateNode"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Synchronization"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Task"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Text"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/TimeLine"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/Trigger"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/UMLDiagram"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/UseCase"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ObjectType/User"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="enterprise_architect.ecore#//datatypes/ParameterKind">
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ParameterKind/in"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ParameterKind/out"/>
+        <genEnumLiterals ecoreEnumLiteral="enterprise_architect.ecore#//datatypes/ParameterKind/inout"/>
+      </genEnums>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

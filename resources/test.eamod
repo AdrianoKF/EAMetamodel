@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ea="http://www.ds-lab.org/mdsd4sil/metamodel/ea">
+  <ea:ModelObject objectId="1" name="COMPFAIL1" note="Component 1 Failure" stereotype="BasicEvent"/>
+  <ea:ModelObject objectId="2" name="COMPFAIL2" note="Component 2 Failure" stereotype="BasicEvent"/>
+  <ea:ModelObject objectId="999" name="MONFAIL" note="Monitor Failure" stereotype="BasicEvent"/>
+  <ea:ModelObject objectId="3" name="G_AND" note="Gate" stereotype="AndGate"/>
+  <ea:ModelObject objectId="5" name="G_OR" note="Top-level gate" stereotype="OrGate"/>
+  <ea:ModelObject objectId="4" name="COMPFAIL_BOTH" note="Both components failure" stereotype="IntermediateEvent"/>
+  <ea:ModelObject objectId="6" name="COMP_MON_FAIL" note="Both components or monitor failure" stereotype="IntermediateEvent"/>
+  <ea:Connector connectorId="1" type="Association" sourceObject="1" destObject="3"/>
+  <ea:Connector connectorId="2" type="Association" sourceObject="2" destObject="3"/>
+  <ea:Connector connectorId="4" type="Association" sourceObject="999" destObject="5"/>
+  <ea:Connector connectorId="3" type="Association" sourceObject="3" destObject="4"/>
+  <ea:Connector connectorId="6" type="Association" sourceObject="4" destObject="5"/>
+  <ea:Connector connectorId="5" type="Association" sourceObject="5" destObject="6"/>
+</xmi:XMI>
