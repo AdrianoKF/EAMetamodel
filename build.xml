@@ -1,0 +1,20 @@
+<project name="EAMetamodel" basedir=".">
+  <description>
+    Generate code from Ecore models
+  </description>
+
+  <dirname property="antfile.dir" file="${ant.file}"/>
+  <property name="input.dir" location="${antfile.dir}/model" />
+  <property name="output.dir" location="${antfile.dir}/../${ant.project.name}.model" />
+  <property name="source.dir" value="src" />
+
+  <emf.Ecore2Java model="${input.dir}/enterprise_architect.ecore"
+               genModel="${input.dir}/enterprise_architect.genmodel"
+               modelProject="${output.dir}"
+               modelProjectFragmentPath="${source.dir}"
+               generateEditProject="false"
+               generateEditorProject="false"
+               autoBuild="false">
+       <arg line="-package http://www.ds-lab.org/mdsd4sil/metamodel/ea org.dslab.mdsd4sil.metamodel.emf EnterpriseArchitect"/>
+   </emf.Ecore2Java>
+</project>

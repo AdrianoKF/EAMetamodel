@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotationsmodel:AnnotatedModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:annotationsmodel="http://www.eclipse.org/emf/texo/annotations/model" xmlns:modelannotations="http://www.eclipse.org/emf/texo/modelgenerator/modelannotations">
+  <annotatedEPackages>
+    <ePackage href="enterprise_architect.ecore#/"/>
+    <ePackageAnnotations xsi:type="modelannotations:EPackageModelGenAnnotation" packagePath="org.dslab.mdsd4sil.metamodel.enterprisearchitect" simpleClassName="EnterpriseArchitectModelPackage" simpleModelFactoryClassName="EnterpriseArchitectModelFactory" rootClassExtends=""/>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="enterprise_architect.ecore#//ModelObject"/>
+      <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEReference">
+        <eReference href="enterprise_architect.ecore#//ModelObject/package"/>
+        <eReferenceAnnotations xsi:type="modelannotations:EReferenceModelGenAnnotation" getter="getPkg" setter="setPkg" validJavaMemberName="pkg"/>
+      </annotatedEStructuralFeatures>
+    </annotatedEClassifiers>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="enterprise_architect.ecore#//OperationParameter"/>
+      <eClassAnnotations xsi:type="modelannotations:EClassModelGenAnnotation" serializable="true"/>
+    </annotatedEClassifiers>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="enterprise_architect.ecore#//Diagram"/>
+      <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEReference">
+        <eReference href="enterprise_architect.ecore#//Diagram/package"/>
+        <eReferenceAnnotations xsi:type="modelannotations:EReferenceModelGenAnnotation" getter="getPkg" setter="setPkg" validJavaMemberName="pkg"/>
+      </annotatedEStructuralFeatures>
+    </annotatedEClassifiers>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="enterprise_architect.ecore#//Connector"/>
+      <eClassAnnotations xsi:type="modelannotations:EClassModelGenAnnotation" serializable="true"/>
+    </annotatedEClassifiers>
+  </annotatedEPackages>
+  <annotatedEPackages>
+    <ePackage href="enterprise_architect.ecore#//datatypes"/>
+    <ePackageAnnotations xsi:type="modelannotations:EPackageModelGenAnnotation" packagePath="org.dslab.mdsd4sil.metamodel.enterprisearchitect.datatypes" rootClassExtends=""/>
+  </annotatedEPackages>
+</annotationsmodel:AnnotatedModel>
