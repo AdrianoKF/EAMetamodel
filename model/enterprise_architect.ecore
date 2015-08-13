@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="enterprisearchitect" nsURI="http://www.ds-lab.org/mdsd4sil/metamodel/ea"
     nsPrefix="ea">
-  <eClassifiers xsi:type="ecore:EClass" name="ModelObject">
+  <eClassifiers xsi:type="ecore:EClass" name="ModelEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" ordered="false"
         upperBound="-1" eType="#//Attribute" containment="true" eOpposite="#//Attribute/object"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" ordered="false"
@@ -17,9 +17,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectType" eType="#//datatypes/ObjectType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stereotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//ModelObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="package" ordered="false"
-        lowerBound="1" eType="#//Package" eOpposite="#//Package/objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//ModelEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pkg" ordered="false" lowerBound="1"
+        eType="#//Package" eOpposite="#//Package/objects"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConnectors" ordered="false"
         upperBound="-1" eType="#//Connector" transient="true" unsettable="true" derived="true"
         eOpposite="#//Connector/destObject"/>
@@ -53,8 +53,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//ModelObject"
-        eOpposite="#//ModelObject/operations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//ModelEntity"
+        eOpposite="#//ModelEntity/operations"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperationParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -69,7 +69,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Package">
     <eStructuralFeatures xsi:type="ecore:EReference" name="objects" ordered="false"
-        upperBound="-1" eType="#//ModelObject" containment="true" eOpposite="#//ModelObject/package"/>
+        upperBound="-1" eType="#//ModelEntity" containment="true" eOpposite="#//ModelEntity/pkg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagrams" ordered="false"
         upperBound="-1" eType="#//Diagram" containment="true" eOpposite="#//Diagram/package"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -90,7 +90,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" lowerBound="1"
-        eType="#//ModelObject" eOpposite="#//ModelObject/attributes"/>
+        eType="#//ModelEntity" eOpposite="#//ModelEntity/attributes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stereotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeTag">
@@ -122,16 +122,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceAggregationType"
         eType="#//datatypes/AggregationType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="destAggregationType" eType="#//datatypes/AggregationType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceObject" eType="#//ModelObject"
-        resolveProxies="false" eOpposite="#//ModelObject/outgoingConnectors"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="destObject" eType="#//ModelObject"
-        resolveProxies="false" eOpposite="#//ModelObject/incomingConnectors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceObject" eType="#//ModelEntity"
+        resolveProxies="false" eOpposite="#//ModelEntity/outgoingConnectors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destObject" eType="#//ModelEntity"
+        resolveProxies="false" eOpposite="#//ModelEntity/incomingConnectors"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiagramObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" lowerBound="1"
-        eType="#//ModelObject"/>
+        eType="#//ModelEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" lowerBound="1"
         eType="#//Diagram" eOpposite="#//Diagram/objects"/>
   </eClassifiers>
@@ -142,7 +142,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="notes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="object" lowerBound="1"
-        eType="#//ModelObject" eOpposite="#//ModelObject/taggedValues"/>
+        eType="#//ModelEntity" eOpposite="#//ModelEntity/taggedValues"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiagramConnector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" lowerBound="1"
