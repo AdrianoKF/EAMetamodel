@@ -1,1 +1,1 @@
-
+clean.dependsOn ':EAMetamodel.model:clean'
