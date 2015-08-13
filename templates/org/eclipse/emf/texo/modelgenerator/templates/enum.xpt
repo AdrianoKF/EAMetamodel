@@ -25,7 +25,7 @@ package «ePackageAnnotation.packagePath»;
  * @generated
  */
 «modelController.getJavaAnnotations(this.EEnum, "type")-»
-public enum «this.simpleClassName» implements util.PersistentEnum
+public enum «this.simpleClassName» implements org.dslab.mdsd4sil.util.hibernate.PersistentEnum
 {
 «EXPAND org::eclipse::emf::texo::modelgenerator::templates::enum_addition::root(modelController) FOR this»
 
@@ -44,11 +44,11 @@ public enum «this.simpleClassName» implements util.PersistentEnum
 	 	 */
 		«modelController.getJavaAnnotations(el, "field")-»
 		«toUpperCase(format(el.name))»(«el.value», "«el.name»", "«el.literal»") {
-		
+
  		/**
 		 * @return always true for this instance
  		 * @generated
- 		 */ 
+ 		 */
 		@Override
 		public boolean is«toFirstUpper(el.name)»() {
 			return true;
@@ -69,7 +69,7 @@ public enum «this.simpleClassName» implements util.PersistentEnum
 	«LET ((EEnumLiteral)e) AS el-»«toUpperCase(format(el.name))»«ENDLET-»
 «ENDFOREACH»
 		};
-		
+
 	/**
 	 * A public read-only list of all the '<em><b>«this.name»</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
@@ -145,7 +145,7 @@ public enum «this.simpleClassName» implements util.PersistentEnum
 	 * @generated
 	 */
 	private final String literal;
-	
+
 	/**
 	 * Only this class can construct instances.
 	 * <!-- begin-user-doc -->
@@ -156,7 +156,7 @@ public enum «this.simpleClassName» implements util.PersistentEnum
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
-	} 
+	}
 
 «FOREACH eEnum.ELiterals AS e-»
 	«LET ((EEnumLiteral)e) AS el-»
@@ -169,7 +169,7 @@ public enum «this.simpleClassName» implements util.PersistentEnum
 	 */
 	public boolean is«toFirstUpper(el.name)»() {
 		return false;
-	}			
+	}
 	«ENDLET-»
 «ENDFOREACH-»
 
