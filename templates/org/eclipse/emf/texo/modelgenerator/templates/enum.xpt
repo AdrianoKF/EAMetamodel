@@ -25,7 +25,7 @@ package «ePackageAnnotation.packagePath»;
  * @generated
  */
 «modelController.getJavaAnnotations(this.EEnum, "type")-»
-public enum «this.simpleClassName» implements org.dslab.mdsd4sil.util.hibernate.PersistentEnum
+public enum «this.simpleClassName» implements org.dslab.mdsd4sil.util.database.PersistentEnum
 {
 «EXPAND org::eclipse::emf::texo::modelgenerator::templates::enum_addition::root(modelController) FOR this»
 
